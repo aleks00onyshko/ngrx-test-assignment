@@ -1,0 +1,59 @@
+<div class="contact-us-container">
+  <div class="info-content" [formGroup]="createForm">
+    <h2>Contact Us!</h2>
+    <mat-form-field appearance="outline">
+      <mat-label>Full Name</mat-label>
+      <input
+        type="email"
+        matInput
+        placeholder="First Name Last Name"
+        [formControl]="controls.fullName"
+      />
+      <mat-error
+        *ngIf="controls.fullName.touched && controls.fullName.errors?.required"
+        >Full name is required</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        matInput
+        placeholder="email@example.com"
+        [formControl]="controls.email"
+      />
+      <mat-error
+        *ngIf="controls.email.touched && controls.email.errors?.required"
+        >Email is required</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Phone number</mat-label>
+      <input
+        matInput
+        placeholder="+380 96 111 0000"
+        [formControl]="controls.phoneNumber"
+        pattern="^[0-9]*$"
+      />
+
+      <mat-error
+        *ngIf="
+          controls.phoneNumber.touched && controls.phoneNumber.errors?.required
+        "
+        >Phone number is required</mat-error
+      >
+    </mat-form-field>
+    <div class="button-log">
+      <button
+        mat-button
+        class="btn"
+        [disabled]="createForm.invalid"
+        (click)="submit()"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</div>

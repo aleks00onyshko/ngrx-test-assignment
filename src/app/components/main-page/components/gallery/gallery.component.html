@@ -1,0 +1,18 @@
+<div class="gallery-container">
+  <div class="hotos">
+    <h2>Photos</h2>
+    <div class="cards-container">
+      <mat-card *ngFor="let photo of photos$ | async" class="card">
+        <img
+          src="{{ photo.url }}"
+          alt="{{ photo.title }}"
+          width="200"
+          height="200"
+        />
+        <mat-card-content>
+          <p>{{ photo.title }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

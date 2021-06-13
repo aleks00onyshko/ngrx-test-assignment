@@ -1,0 +1,30 @@
+<div class="home-container">
+  <div class="top10Photos">
+    <h2>Top 10 Photos</h2>
+    <div class="cards-container">
+      <mat-card *ngFor="let photo of photos$ | async" class="card">
+        <img
+          src="{{ photo.url }}"
+          alt="{{ photo.title }}"
+          width="200"
+          height="200"
+        />
+        <mat-card-content>
+          <p>{{ photo.title }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="top10Posts">
+    <h2>Top 10 Posts</h2>
+
+    <div class="cards-container">
+      <mat-card *ngFor="let post of posts$ | async" class="card">
+        <h3>{{ post.title }}</h3>
+        <mat-card-content>
+          <p>{{ post.body }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

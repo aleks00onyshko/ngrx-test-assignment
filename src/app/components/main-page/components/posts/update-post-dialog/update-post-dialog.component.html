@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Update Post</h1>
+<div mat-dialog-content>
+  <p>Update this post</p>
+  <div class="update-post-form" [formGroup]="updatePostForm">
+    <mat-form-field>
+      <input matInput placeholder="Title" [formControl]="controls.title" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Body" [formControl]="controls.body" />
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="updatePost()">Ok</button>
+</div>

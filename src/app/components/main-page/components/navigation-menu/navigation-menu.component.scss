@@ -1,0 +1,23 @@
+.toolbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.is-active {
+  color: rgb(77, 170, 179);
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-item:visited {
+  color: #607d8b;
+}
+.nav-item:hover {
+  color: #039be5;
+}
+.nav-item :active {
+  color: #039be5;
+}

@@ -1,0 +1,41 @@
+<div class="header">
+  <app-navigation-menu></app-navigation-menu>
+</div>
+
+<mat-drawer-container class="container">
+  <mat-drawer mode="side" opened class="drawer">
+    <div class="aside">
+      <div class="nav-item" routerLink="home" [routerLinkActive]="'is-active'">
+        Home
+      </div>
+      <div class="nav-item" routerLink="posts" [routerLinkActive]="'is-active'">
+        Posts
+      </div>
+      <div
+        class="nav-item"
+        routerLink="gallery"
+        [routerLinkActive]="'is-active'"
+      >
+        Gallery
+      </div>
+      <div
+        class="nav-item"
+        routerLink="contact-us"
+        [routerLinkActive]="'is-active'"
+      >
+        Contact Us
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="spinner" *ngIf="loading$ | async">
+      <mat-spinner color="accent"></mat-spinner>
+    </div>
+
+    <router-outlet *ngIf="!(loading$ | async)"></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<div class="footer">
+  <app-navigation-menu></app-navigation-menu>
+</div>
