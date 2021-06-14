@@ -9,7 +9,7 @@ const routes: Routes = [
         (m) => m.MainPageModule
       ),
   },
-  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  { path: '', pathMatch: 'full', redirectTo: '/main-page/home' },
 ];
 
 @NgModule({
