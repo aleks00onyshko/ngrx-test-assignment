@@ -11,7 +11,6 @@ const routes: Routes = [
   },
   { path: '', pathMatch: 'full', redirectTo: '/main-page/home' },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

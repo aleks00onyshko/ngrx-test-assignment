@@ -17,7 +17,6 @@ const MainPageRoutes: Routes = [
       { path: 'posts', component: PostsComponent },
       { path: 'contact-us', component: ContactUsComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
-      { path: '**', redirectTo: '/home', pathMatch: 'full' },
     ],
   },
 ];
